@@ -9,7 +9,7 @@ Required parameters:
 
 -i/--input: Transcript file in FASTA format.
 
--o/--outfile: Name of two output files (orfs and table).
+-o/--outfile: Name of two output files: orfs and table.
 
 -s/--specie: Species: human,primate,mouse,drosophila,arabidopsis,yeast.
 
@@ -17,9 +17,9 @@ Required parameters:
 
 Other parameters:
 
--p/--pvalue: P-value based on a negative model in random introns. 0.05 (default and recommended), 0.01, 0.005
+-p/--pvalue: P-value based on a negative model in random introns, predefined thresholds in scores.py. 0.05 (default and recommended), 0.01, 0.005.
 
--t/--threshold: Minimum predicted ORF length (amino acids). 24 (default) or 60.
+-t/--threshold: Minimum predicted ORF length in amino acids. 24 (default) or 60.
 
 -n/--orf_number: Select in 'longest' (default) or 'all' ORFs per transcript are analysed.
 
