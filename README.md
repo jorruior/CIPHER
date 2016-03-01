@@ -16,7 +16,8 @@ Other parameters:
 -n/--orf_number: Select in 'longest' (default) or 'all' ORFs per transcript are analysed.
 
 Example to run the test on cipher:
-python cipher.py -i tutorial/sequences_human.fa -o test/test -s human -x tables/hsa_coding_to_intron_dicodon_usage.obj                    
+python cipher.py -i tutorial/sequences_human.fa -o test/test -s human -x tables/hsa_coding_to_intron_dicodon_usage.obj         
+
 FILE TO CREATE DICODONS TABLES: dicodon_matrices.py  (-h for options)
 
 scores.py contains a function with computed thresholds for different ORFs and p-values.
