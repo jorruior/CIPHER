@@ -6,16 +6,26 @@ CIPHER is a program for the prediction of coding sequences, or open reading fram
 
 MAIN EXECUTABLE: cipher.py (-h for options)
 Required parameters:
+
 -i/--input: Transcript file in FASTA format.
+
 -o/--outfile: Name of two output files (orfs and table).
+
 -s/--specie: Species: human,primate,mouse,drosophila,arabidopsis,yeast.
+
 -x/--table: Python object with precomputed discores. Use dicodon_matrices.py to build novel models.
+
 Other parameters:
+
 -p/--pvalue: P-value based on a negative model in random introns. 0.05 (default and recommended), 0.01, 0.005
+
 -t/--threshold: Minimum predicted ORF length (amino acids). 24 (default) or 60.
+
 -n/--orf_number: Select in 'longest' (default) or 'all' ORFs per transcript are analysed.
 
+
 Example to run the test on cipher:
+
 python cipher.py -i tutorial/sequences_human.fa -o test/test -s human -x tables/hsa_coding_to_intron_dicodon_usage.obj         
 
 FILE TO CREATE DICODONS TABLES: dicodon_matrices.py  (-h for options)
