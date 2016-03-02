@@ -20,7 +20,7 @@ Other parameters:
 
 -t/--threshold: Minimum predicted ORF length in amino acids. 24 (default) or 60.
 
--n/--orf_number: Select in 'longest' (default) or 'all' ORFs per transcript are analysed.
+-n/--orf_number: Select if the 'longest' (default) or 'all' ORFs per transcript are analysed.
 
 
 Example to run the test on cipher:
