@@ -28,7 +28,7 @@ Example to run the test on cipher:
 python cipher.py -i test/sequences_human.fa -o test/test -s human -x tables/hsa_coding_to_intron_dicodon_usage.obj         
 
 
-Online tool: http://evolutionarygenomics.imim.es/josepl/pol_web/index.php/primera/home
+Online tool: http://evolutionarygenomics.imim.es/cipher
 
 
 
