@@ -13,7 +13,7 @@ def find_scores(sp,p_value):
 			coding_threshold = (0.103283772197, 0.0828501857409, 0.0788118157357)
 		elif p_value == "0.005":
 			coding_threshold = (0.128866695709, 0.105405369318, 0.107772536839)
-		  
+
 	elif (sp == "mouse") or (sp == "mmu"):
 		specie = "mmu"
 		if p_value == "0.05":
@@ -49,6 +49,9 @@ def find_scores(sp,p_value):
 			coding_threshold = (0.171938901579, 0.114368235407, 0.0427984903964)
 		elif p_value == "0.005":
 			coding_threshold = (0.205835816424, 0.151408870679, 0.0658027186213)
+			
+	if p_value == "none":
+		coding_threshold = (-1000,-1000,-1000)
 
 	return specie,coding_threshold
 
