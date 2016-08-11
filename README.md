@@ -16,7 +16,7 @@ Required parameters:
 
 Other parameters:
 
--p/--pvalue: P-value based on a negative model in random introns, predefined thresholds in scores.py. 0.05 (default and recommended), 0.01, 0.005.
+-p/--pvalue: P-value based on a negative model in random introns, predefined thresholds in scores.py. 0.05 (default and recommended), 0.01, 0.005, none. If none is selected, all predicted ORFs will be printed.
 
 -t/--threshold: Minimum predicted ORF length in amino acids. 24 (default) or 60.
 
