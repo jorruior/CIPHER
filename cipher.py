@@ -113,7 +113,7 @@ def main():
 	parser.add_option("-s","--specie",action="store",dest="sp",help="Specie to be analyzed (required). Prebuilt thresholds and codon matrices for: human, primate, mouse, zebrafish, arabidopsis, yeast")
 	parser.add_option("-x","--table",action="store",dest="dicodons",help="Python object with dicodon scores (required)")
 	parser.add_option("-p","--pvalue",action="store",dest="p_value",default="0.05",help="P-value: 0.05, 0.01, 0.005, none. default=0.05")
-	parser.add_option("-t","--threshold",action="store",type=int,dest="threshold",default="24",help="Minimum ORF length threshold in amino acids. default=24")
+	parser.add_option("-t","--threshold",action="store",type=int,dest="threshold",default="24",help="Minimum ORF length threshold in amino acids (>4). default=24")
 	parser.add_option("-n","--orf_number",action="store",dest="ORF_s",default='longest',help="Predict longest or all ORFs. default=longest")
 	
 	(opt,args)=parser.parse_args()
@@ -125,6 +125,10 @@ def main():
 	check_file(opt.fasta)
 	check_file(opt.dicodons)
 
+	if int(opt.threshold) < 4:
+		print("Minimum ORF threshold should be an integer larger than 4")
+		exit(0)
+		
 	(specie,coding_threshold) = scores.find_scores(opt.sp,opt.p_value)
 
 	dicodons = pickle.load(open(opt.dicodons,'r'))
@@ -137,7 +141,7 @@ def main():
 	t = 0
 	with open(opt.fasta) as fp:
 		for name, seq in scores.read_fasta(fp):
-			c = c + find_cod_orfs(seq,name.replace(">","").replace(" ",""),opt.threshold,opt.ORF_s,dicodons,output,output2,coding_threshold)
+			c = c + find_cod_orfs(seq.upper(),name.replace(">","").replace(" ",""),opt.threshold,opt.ORF_s,dicodons,output,output2,coding_threshold)
 			t += 1
 
 	print >>sys.stderr, "Sequences with coding potential: " + str(c) + " out of " + str(t) + " (" + str(round(float(c)/float(t)*100,2)) + "%)"
