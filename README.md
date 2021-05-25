@@ -23,7 +23,7 @@ Other parameters:
 -n/--orf_number: Select if the 'longest' (default) or 'all' ORFs per transcript are analysed.
 
 
-Example to run the test on cipher:
+**Example to run the test on cipher**:
 
 python cipher.py -i test/sequences_human.fa -o test/test -s human -x tables/hsa_coding_to_intron_dicodon_usage.obj         
 
