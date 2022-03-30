@@ -49,6 +49,10 @@ def find_scores(sp,p_value):
 			coding_threshold = (0.171938901579, 0.114368235407, 0.0427984903964)
 		elif p_value == "0.005":
 			coding_threshold = (0.205835816424, 0.151408870679, 0.0658027186213)
+	
+	else:
+		print("unknown p-value cut-offs for this species")
+		coding_threshold = (-1000,-1000,-1000)
 			
 	if p_value == "none":
 		coding_threshold = (-1000,-1000,-1000)
