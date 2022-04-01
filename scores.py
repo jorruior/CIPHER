@@ -52,9 +52,11 @@ def find_scores(sp,p_value):
 	
 	else:
 		print("unknown p-value cut-offs for this species")
+		specie = sp
 		coding_threshold = (-1000,-1000,-1000)
 			
 	if p_value == "none":
+		specie = sp
 		coding_threshold = (-1000,-1000,-1000)
 
 	return specie,coding_threshold
