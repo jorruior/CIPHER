@@ -82,7 +82,7 @@ def find_cod_orfs(sequence,name,threshold,ORF_s,dicodons,output,output2,coding_t
 				pass
 
 		annot_discore = float(annot_discore)/float(n)
-		if (annot_discore >= coding_threshold[0]) | ((len(str(cds_seq)) < 180) & (annot_discore >= coding_threshold[1])) | ((len(str(cds_seq)) >= 180) & (annot_discore >= coding_threshold[2])): 
+		if ((len(str(cds_seq)) >= 300) & (annot_discore >= coding_threshold[0])) | ((len(str(cds_seq)) < 300) & (len(str(cds_seq)) >= 180) & (annot_discore >= coding_threshold[1])) | (len(str(cds_seq)) < 180) & (annot_discore >= coding_threshold[2])): 
 			ends.append(orf.end)
 			output.write(name + "\torf_" + str(orfs_n) + "\t" + str(orf.start) + "-" + str(orf.end) + "\t" + str(len(str(cds_seq))) + "\t" + str(len(sequence)) + "\t" + str(format(annot_discore, '.5f')) + "\n")
 			output2.write("> " + name + "_" + str(orfs_n) + "\n" + str(cds_seq) + "\n")
