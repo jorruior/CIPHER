@@ -10,7 +10,7 @@ Required parameters:
 
 -o/--outfile: Name of two output files: orfs and table.
 
--s/--specie: Species: human,primate,mouse,drosophila,arabidopsis,yeast.
+-s/--species: Species: human,primate,mouse,drosophila,arabidopsis,yeast.
 
 -x/--table: Python object with precomputed discores. Already prebuilt tables available in 'tables' directory for human,mouse,drosophila,arabidopsis and yeast. Use dicodon_matrices.py (-h for help) to build novel models.
 
