@@ -110,7 +110,7 @@ def main():
 	parser = OptionParser(usage,version="%prog " + __version__)
 	parser.add_option("-i","--input",action="store",dest="fasta",help="Transcript file in FASTA format (required).")
 	parser.add_option("-o","--outfile",action="store",dest="out_file",help="Output file (required). Tab separated text file: name <tab> ORF number <tab> ORF position <tab ORF length <tab> Transcript length <tab> Coding Score.")
-	parser.add_option("-s","--specie",action="store",dest="sp",help="Specie to be analyzed (required). Prebuilt thresholds and codon matrices for: human, primate, mouse, zebrafish, arabidopsis, yeast")
+	parser.add_option("-s","--species",action="store",dest="sp",help="Specie to be analyzed (required). Prebuilt thresholds and codon matrices for: human, primate, mouse, zebrafish, arabidopsis, yeast")
 	parser.add_option("-x","--table",action="store",dest="dicodons",help="Python object with dicodon scores (required)")
 	parser.add_option("-p","--pvalue",action="store",dest="p_value",default="0.05",help="P-value: 0.05, 0.01, 0.005, none. default=0.05")
 	parser.add_option("-t","--threshold",action="store",type=int,dest="threshold",default="24",help="Minimum ORF length threshold in amino acids (>4). default=24")
